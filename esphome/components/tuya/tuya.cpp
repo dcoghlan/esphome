@@ -116,7 +116,7 @@ bool Tuya::validate_message_() {
     calc_checksum += data[i];
 
   if (rx_checksum != calc_checksum) {
-    ESP_LOGW(TAG, "Tuya Received invalid message checksum %02X!=%02X", rx_checksum, calc_checksum);
+    ESP_LOGV(TAG, "Tuya Received invalid message checksum %02X!=%02X", rx_checksum, calc_checksum);
     return false;
   }
 
